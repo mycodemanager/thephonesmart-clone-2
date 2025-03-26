@@ -38,13 +38,14 @@
         <div class="footer-section">
           <h4>Payment methods</h4>
           <div class="payment-methods">
-            <img src="https://ext.same-assets.com/3564519495/1178547341.png" alt="Payment methods" />
+            <img src="@/assets/payment/easypaisa.png" alt="Payment methods" />
+            <img src="@/assets/payment/jazzcash.png" alt="Payment methods" />
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>Copyright © 2025 | Powered by INSPIREINNO SMC PRIVATE LIMITED</p>
+        <p>Copyright © 2025 | Powered by Data Network Solutions</p>
         <div class="social-links">
           <a href="#" title="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -119,8 +120,10 @@
 
   .payment-methods {
     img {
-      max-width: 100%;
+      width: 50px;
       height: auto;
+      margin-right: 10px;
+      border-radius: 6px;
     }
   }
 }

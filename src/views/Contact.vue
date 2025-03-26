@@ -379,6 +379,7 @@ const submitForm = () => {
       border: 1px solid var(--border-color);
       border-radius: 4px;
       font-family: 'Poppins', sans-serif;
+      background-color: transparent;
 
       &:focus {
         outline: none;

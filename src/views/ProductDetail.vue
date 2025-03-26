@@ -290,6 +290,7 @@ onMounted(() => {
       border-right: 1px solid var(--border-color);
       text-align: center;
       font-size: 14px;
+      background-color: transparent;
     }
   }
 

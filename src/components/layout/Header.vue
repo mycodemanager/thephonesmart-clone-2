@@ -137,6 +137,7 @@ const handleSearch = () => {
     padding: 10px 15px;
     border: none;
     outline: none;
+    background-color: transparent;
     font-family: 'Poppins', sans-serif;
   }
 
