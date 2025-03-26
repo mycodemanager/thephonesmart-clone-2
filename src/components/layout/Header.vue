@@ -23,7 +23,7 @@ const handleSearch = () => {
         <!-- Logo -->
         <div class="logo">
           <router-link to="/">
-            <img src="https://ext.same-assets.com/3564519495/1817041638.png" alt="THE PHONES MART" />
+            <img src="../../assets/logo.png" alt="THE PHONES MART" />
           </router-link>
         </div>
 
