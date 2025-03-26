@@ -35,7 +35,6 @@ const handleSearch = () => {
               v-model="searchQuery"
               placeholder="Enter your search"
               @focus="toggleSearchResults"
-              @blur="setTimeout(() => { showSearchResults = false }, 200)"
             />
             <button @click="handleSearch">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
