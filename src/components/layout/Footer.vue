@@ -38,8 +38,8 @@
         <div class="footer-section">
           <h4>Payment methods</h4>
           <div class="payment-methods">
-            <img src="@/assets/payment/easypaisa.png" alt="Payment methods" />
-            <img src="@/assets/payment/jazzcash.png" alt="Payment methods" />
+            <img src="../../assets/payment/easypaisa.png" alt="Payment methods" />
+            <img src="../../assets/payment/jazzcash.png" alt="Payment methods" />
           </div>
         </div>
       </div>
