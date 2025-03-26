@@ -28,32 +28,6 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- Top Products Section -->
-    <section class="top-products">
-      <div class="container">
-        <h2 class="section-title">Our top products</h2>
-
-        <div class="products-showcase">
-          <div class="showcase-card card-large">
-            <div class="card-content">
-              <h3>Feel of Joy</h3>
-              <router-link to="/shop?brand=vedeo" class="btn">Browse products</router-link>
-            </div>
-            <img src="https://ext.same-assets.com/3564519495/352123532.webp" alt="Feel of Joy">
-          </div>
-
-          <div class="showcase-card card-large">
-            <div class="card-content">
-              <h3>Denos T12</h3>
-              <p>Small and powerfull</p>
-              <router-link to="/shop?brand=denos" class="btn">Browse products</router-link>
-            </div>
-            <img src="https://ext.same-assets.com/3564519495/352123532.webp" alt="Denos T12">
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Smartphone Banner -->
     <section class="smartphone-banner">
       <div class="container">
