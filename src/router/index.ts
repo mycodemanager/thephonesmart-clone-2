@@ -36,6 +36,12 @@ const routes = [
     name: 'Wishlist',
     component: () => import('../views/Wishlist.vue'),
   },
+  {
+    path: '/payment',
+    name: 'payment',
+    component: () => import('../views/paymenting.vue'),
+    props: true
+  }
 ];
 
 const router = createRouter({

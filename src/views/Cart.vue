@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useCartStore } from '../stores/cartStore';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const cartStore = useCartStore();
 
 // Format price function
@@ -32,6 +34,11 @@ const getItemSubtotal = (price: number, quantity: number) => {
 const isCartEmpty = computed(() => {
   return cartStore.cartItems.length === 0;
 });
+
+function onBuyNow() {
+  // 在这里添加购买逻辑，例如添加到购物车或立即购买
+  router.push({ name: 'payment' });
+}
 </script>
 
 <template>
@@ -91,24 +98,14 @@ const isCartEmpty = computed(() => {
 
             <div class="item-quantity">
               <div class="quantity-selector">
-                <button
-                  @click="updateQuantity(item.product.id, item.quantity - 1)"
-                  class="quantity-btn"
-                  :disabled="item.quantity <= 1"
-                >
+                <button @click="updateQuantity(item.product.id, item.quantity - 1)" class="quantity-btn"
+                  :disabled="item.quantity <= 1">
                   -
                 </button>
-                <input
-                  type="number"
-                  :value="item.quantity"
-                  min="1"
+                <input type="number" :value="item.quantity" min="1"
                   @input="event => updateQuantity(item.product.id, parseInt((event.target as HTMLInputElement).value) || 1)"
-                  class="quantity-input"
-                >
-                <button
-                  @click="updateQuantity(item.product.id, item.quantity + 1)"
-                  class="quantity-btn"
-                >
+                  class="quantity-input">
+                <button @click="updateQuantity(item.product.id, item.quantity + 1)" class="quantity-btn">
                   +
                 </button>
               </div>
@@ -121,7 +118,8 @@ const isCartEmpty = computed(() => {
             <div class="item-remove">
               <button @click="removeItem(item.product.id)" class="remove-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                  <path
+                    d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
                 </svg>
               </button>
             </div>
@@ -135,7 +133,7 @@ const isCartEmpty = computed(() => {
             <div class="summary-label">Total</div>
             <div class="summary-value">{{ formatPrice(cartStore.totalPrice) }}</div>
           </div>
-          <button class="btn checkout-btn">Proceed to Checkout</button>
+          <button class="btn checkout-btn" @click="onBuyNow">BUY NOW</button>
           <router-link to="/shop" class="btn continue-shopping">Continue Shopping</router-link>
         </div>
       </div>
@@ -413,6 +411,7 @@ const isCartEmpty = computed(() => {
 
   .item-price {
     grid-area: price;
+
     &::before {
       content: "Price: ";
       font-weight: 600;
@@ -422,6 +421,7 @@ const isCartEmpty = computed(() => {
 
   .item-quantity {
     grid-area: quantity;
+
     &::before {
       content: "Quantity: ";
       font-weight: 600;
@@ -433,6 +433,7 @@ const isCartEmpty = computed(() => {
 
   .item-subtotal {
     grid-area: subtotal;
+
     &::before {
       content: "Subtotal: ";
       font-weight: 600;
