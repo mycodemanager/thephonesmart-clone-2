@@ -453,7 +453,7 @@ const brands = computed(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    // background-color: white;
     border: 1px solid var(--border-color);
     border-radius: 4px;
     font-size: 14px;
