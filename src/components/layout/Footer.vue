@@ -30,8 +30,7 @@
         <!-- Contact Info -->
         <div class="footer-section">
           <h4>Contact info</h4>
-          <p class="contact-item">+92 320 9972624</p>
-          <p class="contact-item">inspireinnosmc@gmail.com</p>
+          <p class="contact-item">gizmoshopper@gmail.com</p>
         </div>
 
         <!-- Payment Methods -->
