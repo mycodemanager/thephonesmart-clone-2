@@ -6,16 +6,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-sections">
-        <!-- Useful Links -->
-        <div class="footer-section">
-          <h4>Useful links</h4>
-          <ul>
-            <li><router-link to="/faq">FAQ</router-link></li>
-            <li><router-link to="/terms">Terms & Conditions</router-link></li>
-            <li><router-link to="/refund">Refund Policy</router-link></li>
-            <li><router-link to="/privacy">Privacy Policy</router-link></li>
-          </ul>
-        </div>
+
 
         <!-- Quick Links -->
         <div class="footer-section">
@@ -30,7 +21,7 @@
         <!-- Contact Info -->
         <div class="footer-section">
           <h4>Contact info</h4>
-          <p class="contact-item">gizmoshopper@gmail.com</p>
+          <p class="contact-item">pakgizmo@gmail.com</p>
         </div>
 
         <!-- Payment Methods -->
