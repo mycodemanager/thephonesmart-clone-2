@@ -37,7 +37,7 @@ const isCartEmpty = computed(() => {
 
 function onBuyNow() {
   // 在这里添加购买逻辑，例如添加到购物车或立即购买
-  router.push({ name: 'payment' });
+  router.push({ path: '/order' });
 }
 </script>
 

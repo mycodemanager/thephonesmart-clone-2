@@ -37,7 +37,7 @@ const routes = [
     component: () => import('../views/Wishlist.vue'),
   },
   {
-    path: '/payment',
+    path: '/order',
     name: 'payment',
     component: () => import('../views/paymenting.vue'),
     props: true
