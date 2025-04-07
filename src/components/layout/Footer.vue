@@ -35,7 +35,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>Copyright © 2025 | Powered by Data Network Solutions</p>
+        <p>Copyright © 2025 | Powered by Data Network Solutions (SMC-Private) Limited</p>
         <div class="social-links">
           <a href="#" title="Facebook">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
